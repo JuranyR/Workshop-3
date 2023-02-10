@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+$color-White: hsl(0, 0%, 100%);
+$color-Black: hsl(0, 0%, 0%);
+
+.imgsContainer {
+  // width: 100%;
+  height: auto;
+  padding: 100px;
+}
+
+.divOC {
+  display: flex;
+  justify-content: space-between;
+}
+
+h3 {
+  font-size: 30px;
+  color: $color-Black;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+}
+
+.botonuno {
+  background-color: $color-White;
+  font-size: 15px;
+  color: $color-Black;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  width: 130px;
+  height: 35;
+  letter-spacing: 3px;
+  cursor: pointer;
+}
+
+.botonuno:hover {
+  background-color: $color-Black;
+  color: $color-White;
+}
+
+.botondos {
+  display: none;
+  background-color: $color-White;
+  font-size: 15px;
+  color: $color-Black;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  width: 130px;
+  height: 35;
+  letter-spacing: 3px;
+  cursor: pointer;
+}
+
+/* cards */
+.card {
+  height: 450px;
+  width: 250px;
+  padding: 32px;
+  font-size: 30px;
+  color: $color-White;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  letter-spacing: 2px;
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 30px;
+  cursor: pointer;
+  background-repeat: no-repeat;
+}
+
+.card:hover {
+  opacity: 0.4;
+}
+
+.cardsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 480px) {
+  .desaparece {
+    display: none;
+  }
+  .imgsContainer {
+    width: 100%;
+    height: auto;
+  }
+  .botondos {
+    display: block;
+  }
+  .botonuno {
+    display: none;
+  }
+  .card {
+    height: 120px;
+    width: 100%;
+    padding: 0px 200px 0px 32px;
+    align-items: center;
+    margin-bottom: 20px;
+    background-size: cover;
+  }
+  .cardsContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 0px;
+    padding: 0px;
+  }
+  .imgsContainer {
+    width: 100%;
+    height: auto;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
