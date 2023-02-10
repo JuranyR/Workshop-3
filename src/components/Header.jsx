@@ -1,29 +1,40 @@
-import React from "react";
+import React, {useState} from "react";
+import logo from '../assets/images/logo.svg';
+import hamburger from '../assets/images/icon-hamburger.svg';
+import close from '../assets/images/icon-close.svg';
+
 
 const Header = () => {
+    const [openMenu, setOpenMenu]= useState(false)
+    const items= ['About','Careers','Events','Products','Support'];
+
+    const onOpenMenu=()=>{
+        setOpenMenu(!openMenu)
+    }
+
     return (
         <section className="header">
             <nav className="navbar ">
-                <a className="navbar-brand" href="#">loopstudios</a>
-                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"></span>
+                <a className="navbar-brand" href="#">
+                    <img src={logo} alt="logo" />
+                </a>
+                <button className="navbar-toggler" type="button" onClick={()=>onOpenMenu()}>
+                    <img src={hamburger} alt="logo" />
                 </button>
-                <ul className="navbar-nav">
-                    <li className="navbar-nav-item ">
-                        <a className="nav-link active" aria-current="page" href="#">About</a>
-                    </li>
-                    <li className="navbar-nav-item">
-                        <a className="nav-link" href="#">Careers</a>
-                    </li>
-                    <li className="navbar-nav-item">
-                        <a className="nav-link" href="#">Events</a>
-                    </li>
-                    <li className="navbar-nav-item">
-                        <a className="nav-link" href="#">Products</a>
-                    </li>
-                    <li className="navbar-nav-item">
-                        <a className="nav-link" href="#">Support</a>
-                    </li>
+                <ul className={openMenu? 'navbar-nav show':'navbar-nav'}>
+                    <div className={openMenu? 'navbar-close show':'navbar-close'}>
+                        <img src={logo} alt="logo" />
+                        <button type="button" onClick={()=>onOpenMenu()}>
+                            <img src={close} alt="close" />
+                        </button>
+                    </div>
+                    {
+                        items.map(item=>(
+                            <li className="navbar-nav-item ">
+                                <a className="nav-link" href="#">{item}</a>
+                            </li>
+                        ))
+                    }
                 </ul>
             </nav>
             <div  className="text-banner">
