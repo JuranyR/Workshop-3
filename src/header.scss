@@ -1,0 +1,29 @@
+.header{
+    background: url(../public/images/image-hero.jpg) center no-repeat;
+    height: 600px;
+    padding-left: 120px;
+    color: white;
+    width: 100%;
+    .navbar{
+        display: flex;
+        &-nav {
+            display: flex;
+            justify-content: end;
+            width: 100%;
+            &-item {
+                padding:20px;
+                list-style: none;
+            }
+        }
+        a{
+            color: white;
+            text-decoration:none;
+        }
+    }
+}
+
+* {
+ box-sizing: border-box;
+ padding: 0;
+ margin: 0;
+}
