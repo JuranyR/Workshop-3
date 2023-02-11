@@ -5,7 +5,7 @@
     &-title-social{
         display: flex;
         justify-content: space-between;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
         .desktop{
             display: flex;
             align-items: center;
@@ -27,7 +27,7 @@
     }
     .container-fluid{
         display: flex;
-        align-items: center;
+        align-items: baseline;
         gap: 30px;
         &-item{
             padding: 10px 0;
@@ -70,6 +70,7 @@
 
 @media  (max-width: 720px) {
     .footer{
+        padding: 50px 0px;
         &-title-social{
             flex-direction: column;
             align-items: center;
@@ -80,6 +81,7 @@
         .container-fluid{
             flex-direction: column;
             align-items: center;
+            
             gap: 10px;
             .text{
                 justify-content: center;

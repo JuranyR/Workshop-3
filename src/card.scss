@@ -37,7 +37,8 @@ h3 {
   font-size: 15px;
   color: $color-Black;
   font-family: "Josefin Sans", sans-serif;
-  font-weight: 300;
+  font-weight: bold;
+  border-radius: 3px;
   width: 150px;
   height: 48px;
   letter-spacing: 3px;
@@ -55,11 +56,18 @@ h3 {
   font-size: 15px;
   color: $color-Black;
   font-family: "Josefin Sans", sans-serif;
-  font-weight: 300;
-  width: 130px;
-  height: 35;
+  font-weight: bold;
+  width: 150px;
+  height: 48px;
+  border-radius: 3px;
   letter-spacing: 3px;
+  margin-top: 30px;
   cursor: pointer;
+}
+
+.botondos:hover {
+  background-color: $color-Black;
+  color: $color-White;
 }
 
 /* cards */
@@ -92,13 +100,25 @@ h3 {
 }
 
 /* RESPONSIVE */
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 690px) {
   .desaparece {
     display: none;
   }
   .imgsContainer {
+    height: auto;
     width: 100%;
     height: auto;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px 30px 100px 30px;
+  }
+  h3{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 60px;
+    font-size: 35px;
   }
   .botondos {
     display: block;
@@ -107,10 +127,12 @@ h3 {
     display: none;
   }
   .card {
-    height: 120px;
+    // height: 200px;
+    height: 150px;
     width: 100%;
-    padding: 0px 200px 0px 32px;
-    align-items: center;
+    padding: 0px 400px 50px 32px;
+    background-position-x: center;
+    background-position-y: 8%;
     margin-bottom: 20px;
     background-size: cover;
   }
@@ -118,15 +140,19 @@ h3 {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    gap: 20px;
     margin-top: 0px;
     padding: 0px;
-  }
-  .imgsContainer {
     width: 100%;
-    height: auto;
-    padding: 0px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  }
+}
+
+@media screen and (max-width: 500px){
+  .card {
+    padding: 0px 200px 50px 32px;
+    height: 150px;
+  }
+  h3{
+    font-size: 30px;
   }
 }
