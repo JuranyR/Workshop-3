@@ -8,18 +8,25 @@ $color-White: hsl(0, 0%, 100%);
 $color-Black: hsl(0, 0%, 0%);
 
 .imgsContainer {
-  // width: 100%;
+  width: 100%;
   height: auto;
-  padding: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:space-between;
+  padding: 0px 100px 100px 100px;
 }
 
 .divOC {
-  display: flex;
-  justify-content: space-between;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
 }
 
 h3 {
-  font-size: 30px;
+  font-size: 44px;
+  letter-spacing: 4px;
   color: $color-Black;
   font-family: "Josefin Sans", sans-serif;
   font-weight: 300;
@@ -31,8 +38,8 @@ h3 {
   color: $color-Black;
   font-family: "Josefin Sans", sans-serif;
   font-weight: 300;
-  width: 130px;
-  height: 35;
+  width: 150px;
+  height: 48px;
   letter-spacing: 3px;
   cursor: pointer;
 }
@@ -74,13 +81,14 @@ h3 {
 
 .card:hover {
   opacity: 0.4;
+  color: $color-Black;
 }
 
 .cardsContainer {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  margin-top: 30px;
+  justify-content:space-between;
+  margin-top: 50px;
 }
 
 /* RESPONSIVE */
