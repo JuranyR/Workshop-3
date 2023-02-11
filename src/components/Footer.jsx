@@ -15,15 +15,19 @@ const Footer = () => {
                 <div className="desktop">
                     <a href="" className="me-4 text-reset">
                         <img src={facebook} alt="face" />
+                        <hr />
                     </a>
                     <a href="" className="me-4 text-reset">
                         <img src={twitter} alt="tw" />
+                        <hr />
                     </a>
                     <a href="" className="me-4 text-reset">
                         <img src={pinterest} alt="pr" />
+                        <hr />
                     </a>
                     <a href="" className="me-4 text-reset">
                         <img src={instagram} alt="in" />
+                        <hr />
                     </a>
                 </div>
             </section>
@@ -32,23 +36,30 @@ const Footer = () => {
                     items.map(item=>(
                         <div className="container-fluid-item">
                             <h6>{item}</h6>
+                            <hr />
                         </div>
                     ))
                 }
                 <div className="mobile">
                     <a href="" className="me-4 text-reset">
                         <img src={facebook} alt="face" />
+                        <hr />
                     </a>
+                    
                     <a href="" className="me-4 text-reset">
                         <img src={twitter} alt="tw" />
+                        <hr />
                     </a>
                     <a href="" className="me-4 text-reset">
                         <img src={pinterest} alt="pr" />
+                        <hr />
                     </a>
                     <a href="" className="me-4 text-reset">
                         <img src={instagram} alt="in" />
+                        <hr />
                     </a>
                 </div>
+                
                 <div className="text">
                     © 2021 loopstudio. All rigths reserved
                 </div>

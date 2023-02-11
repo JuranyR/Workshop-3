@@ -32,6 +32,7 @@ const Header = () => {
                         items.map(item=>(
                             <li className="navbar-nav-item ">
                                 <a className="nav-link" href="#">{item}</a>
+                                <hr/>
                             </li>
                         ))
                     }
